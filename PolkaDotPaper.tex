@@ -23,7 +23,7 @@
 \usepackage{tikz}
 \usepackage{multido}
 \usepackage{color}
-\usepackage{background}
+
 \unitlength=1mm
 \definecolor{pink}{rgb}{1,0.95,0.95}
 \definecolor{lightyellow}{rgb}{1,0.99,0.95}
@@ -40,7 +40,6 @@
 \def\Totx{55}   %% adjust
 \def\Offy{0.3}
 \def\Dotcolor{white}
-\pagecolor{pink}
 
 \newsavebox{\mybox}
 \sbox{\mybox}{%
@@ -55,14 +54,6 @@
    }%
 \end{tikzpicture}
  }%
-
-\backgroundsetup{
- scale=1, angle=10, position={current page.center}, contents={%
-\begin{tikzpicture}[remember picture,overlay]
-  \node at (current page.center) {\usebox\mybox};
-\end{tikzpicture}%
- }%
-}%
 
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
